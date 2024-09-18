@@ -31,7 +31,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* width: 100%; */
 }
 
 .nav-links li {
@@ -54,6 +53,45 @@
     color: #F7F9F9; /* Keep text color consistent */
     font-weight: bold;
 }
+
+/* Profile Section Below Navbar */
+.profile-section {
+    display: flex;
+    align-items: center;
+    /* padding: 10px 20px; */
+    /* background-color: #192734; Match the navbar's dark theme */
+    margin-top: auto; /* Push the profile section to the bottom */
+    width: 100%; /* Full width of the navbar */
+    margin-bottom: 35px;
+}
+
+.profile-icon {
+    font-size: 40px; /* Adjust icon size */
+    margin-right: 10px;
+    color: #F7F9F9; /* White to match the text */
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-details h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #F7F9F9; 
+}
+
+.profile-details a {
+    font-size: 14px;
+    color: #1DA1F2; /* Light blue for link */
+    text-decoration: none;
+}
+
+.profile-details a:hover {
+    text-decoration: underline;
+}
+
 /* Mobile view */
 @media (max-width: 768px) {
     .navbar2 {
@@ -91,5 +129,24 @@
 
     .nav-links li {
         text-align: left;
+    }
+
+    /* Adjust the profile section for mobile view */
+    .profile-section {
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .profile-icon {
+        font-size: 30px;
+    }
+
+    .profile-details h4 {
+        font-size: 14px;
+    }
+
+    .profile-details a {
+        font-size: 12px;
     }
 }

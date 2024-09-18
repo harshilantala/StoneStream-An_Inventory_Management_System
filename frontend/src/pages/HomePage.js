@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "../styles/HomePage.css"; // Import the relevant CSS
+import "../styles/HomePage.css"; 
 import Navbar from '../components/Navbar'; // Assuming you have a Navbar component
 
 const HomePage = () => {
   const [currentText, setCurrentText] = useState('');
   const [textIndex, setTextIndex] = useState(0);
-  const fullText = "Manage your inventory efficiently!"; // Overview text
+  const fullText = "Manage your inventory efficiently!"; 
   const navigate = useNavigate();
 
   useEffect(() => {
