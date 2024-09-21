@@ -1,66 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-* {
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-::selection {
-  color: #000;
-  background: #fff;
-}
-
-.img {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.img::before {
-  content: '';
-  position: absolute;
+  overflow: hidden; /* Prevent vertical and horizontal scroll */
   height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
 }
 
-.center {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  padding: 0 20px;
-  text-align: center;
+/* Homepage container */
+.homepage-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  height: calc(100vh - 80px);
+  background-color: #f7f7f7;
 }
 
-.center .title {
-  color: #fff;
-  font-size: 55px;
-  font-weight: 600;
+/* Overview section */
+.homepage-overview {
+  flex: 1;
+  padding-right: 2rem;
+  margin-bottom: 70px;
 }
 
-.center .sub_title {
-  color: #fff;
-  font-size: 52px;
-  font-weight: 600;
+.homepage-overview h1 {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 1rem;
 }
 
-.center .btns {
+.typewriter-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%; 
+  min-height: 50px; /* Ensure a consistent height for the text */
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.get-started-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.get-started-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Illustration section */
+.homepage-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.homepage-illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btns {
   margin-top: 20px;
 }
 
-.center .btns button {
+.btns button {
   height: 55px;
   width: 170px;
   border-radius: 5px;
   border: none;
   margin: 0 10px;
-  border: 2px solid white;
+  border: 2px solid 007bff;
   font-size: 20px;
   font-weight: 500;
   padding: 0 10px;
@@ -69,17 +90,17 @@
   transition: all 0.3s ease;
 }
 
-.center .btns button:first-child {
-  color: #fff;
+.btns button:first-child {
+  color: #007bff;
   background: none;
 }
 
 .btns button:first-child:hover {
-  background: white;
+  background: #007bff;
   color: black;
 }
 
-.center .btns button:last-child {
-  background: white;
+.btns button:last-child {
+  background: #007bff;
   color: black;
 }
