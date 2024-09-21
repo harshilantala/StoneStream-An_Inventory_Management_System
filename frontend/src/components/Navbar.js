@@ -1,28 +1,20 @@
 import React from 'react';
-import { useNavigate, useLocation  } from 'react-router-dom';
-import '../styles/Navbar.css'; // Import CSS for styling the Navbar
+import '../styles/Navbar.css'; // Create a separate CSS file for Navbar styles
 
 const Navbar = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleButtonClick = () => {
-    if (location.pathname === '/login') {
-      navigate('/'); // If on login page, navigate to home
-    } else {
-      navigate('/login'); // If on other pages, navigate to login
-    }
-  };
-
   return (
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <h1>StoneStream</h1>
-      </div>
-      <div className="navbar-links">
-        <button onClick={handleButtonClick} className="login-btn">
-          {location.pathname === '/login' ? 'Home' : 'Login'}
-        </button>
+    <nav>
+      <div className="menu">
+        <div className="logo">
+          <a href="/">StoneStream</a>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Inventory</a></li>
+          <li><a href="/">Sales</a></li>
+          <li><a href="/">Purchases</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
       </div>
     </nav>
   );
